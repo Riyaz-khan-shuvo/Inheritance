@@ -9,8 +9,8 @@ namespace Inheritance
 
     class Person
     {
-        string name;
-        int age;
+       public string name;
+       public int age;
         public static int numberOfPerson = 0;
         
         public  void Display()
@@ -18,11 +18,27 @@ namespace Inheritance
             Console.WriteLine("Your Name is : "+ name + " Your Age is : " + age);
         }
 
-       public Person(string _name , int _age)
+       //public Person(string _name , int _age)
+       // {
+       //     name = _name;
+       //     age = _age;
+       //     numberOfPerson++;
+       // }
+    }
+
+     class Student :  Person 
+    {
+        public int id;
+        public void  Displays()
         {
-            name = _name;
-            age = _age;
-            numberOfPerson++;
+            Console.WriteLine("Your Name is : " + name + " Your Age is : " + age + " And Your Id is : " + id);
+        }
+
+        public Student(string _names , int _ages , int _id)
+        {
+            name = _names;
+            age= _ages;
+            id = _id;
         }
     }
 
@@ -32,14 +48,18 @@ namespace Inheritance
         {
             Console.WriteLine("Hello World!!!");
 
-            Person riyaz = new Person("Riyaz Khan Shuvo" , 18);
+            //Person riyaz = new Person("Riyaz Khan Shuvo" , 18);
 
-            riyaz.Display();
+            //riyaz.Display();
 
-            Person shuvo = new Person("Shuvo Khan", 23);
-            shuvo.Display();
+            //Person shuvo = new Person("Shuvo Khan", 23);
+            //shuvo.Display();
 
-            Console.WriteLine("Total Person : " + Person.numberOfPerson);
+            //Console.WriteLine("Total Person : " + Person.numberOfPerson);
+
+            Student riyaz1 = new Student("Riyaz Khan" , 19 , 1901017);
+
+            riyaz1.Displays();
 
             Console.ReadLine(); 
         }
